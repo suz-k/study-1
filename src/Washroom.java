@@ -8,17 +8,16 @@ public class Washroom {
     int iVacancy = 3;
 
     public void useWashroom(String user) {
-        while(iVacancy == 0) {
-            try {
-                synchronized (this) {
+        synchronized (this) {
+            while(iVacancy == 0) {
+                try {
                     wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
+            iVacancy--;
         }
-
-        iVacancy--;
         arrayUser.add(user);
 
         System.out.println(user + " 사용중.....");
