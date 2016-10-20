@@ -27,6 +27,6 @@ public class Main {
 //            writer1.join();
 //            writer2.join();
 //        }catch (Exception e){};
-        // test2
+        //test.sook
     }
 }
