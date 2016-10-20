@@ -11,4 +11,5 @@ public class Reader extends Thread {
     public  void run() {
         System.out.println(share.getTodayNew());
     }
+    //이상구_test~~
 }
